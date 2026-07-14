@@ -1,0 +1,4 @@
+rootProject.name = 'AscentHUB'
+
+include 'api'
+include 'app'

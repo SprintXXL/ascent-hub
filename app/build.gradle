@@ -1,0 +1,15 @@
+plugins {
+    id 'application'
+}
+
+dependencies {
+    implementation project(':api')
+}
+
+application {
+    mainClass = 'com.sprintxxl.ascenthub.Main'
+}
+
+jar {
+    archiveBaseName = 'AscentHUB'
+}
