@@ -1,6 +1,7 @@
 package com.sprintxxl.ascenthub.build;
 
 import com.sprintxxl.ascenthub.mods.Mod;
+import com.sprintxxl.ascenthub.mods.definitions.AscentMods;
 
 import java.nio.file.Path;
 import java.util.List;
@@ -17,15 +18,13 @@ public class JarDistributor {
                 continue;
             }
 
-            Path destination;
-
             if (targetMod.dependsOn(builtMod.getID())) {
-                destination = targetMod.getLibsDirectory();
-            } else {
-                destination = targetMod.getRunModsDirectory();
+                copyJar(builtJar, targetMod.getLibsDirectory());
             }
 
-            copyJar(builtJar, destination);
+            if (targetMod == AscentMods.ARRI) {
+                copyJar(builtJar, targetMod.getRunModsDirectory());
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.sprintxxl.ascenthub.mods.definitions;
+package com.sprintxxl.ascenthub.global;
 
 public final class ModIDs {
 

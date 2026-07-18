@@ -25,8 +25,8 @@ public final class DefinitionRegistry {
         DEFINITIONS.put(id, definition);
     }
 
-    public static List<AscentDefinition> getAllDefinitions() {
-        return new ArrayList<>(DEFINITIONS.values());
+    public static Map<DefinitionID, AscentDefinition> getAllDefinitions() {
+        return new LinkedHashMap<>(DEFINITIONS);
     }
 
     public static AscentDefinition getDefinition(DefinitionID id) {

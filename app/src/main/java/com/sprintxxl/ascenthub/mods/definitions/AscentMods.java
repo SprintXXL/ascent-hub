@@ -13,7 +13,6 @@ public final class AscentMods {
 
         register(ARRI);
         register(MATTER);
-        register(RECIPEAPI);
         register(WORLDGEN);
         register(TWEAKS);
         register(TOOLS);
@@ -23,7 +22,6 @@ public final class AscentMods {
         register(HUD);
         register(TOOLWORKS);
         register(INDUSTRY);
-        register(RECIPES);
     }
 
     public static final Mod ARRI =
@@ -37,15 +35,6 @@ public final class AscentMods {
             new Mod(
                     ModIDs.MATTER,
                     "Primitive Matter",
-                    dependencies(
-                            ModIDs.ARRI
-                    )
-            );
-
-    public static final Mod RECIPEAPI =
-            new Mod(
-                    ModIDs.RECIPEAPI,
-                    "Primitive RecipeAPI",
                     dependencies(
                             ModIDs.ARRI
                     )
@@ -136,23 +125,7 @@ public final class AscentMods {
                     "Primitive Industry",
                     dependencies(
                             ModIDs.ARRI,
-                            ModIDs.MULTIBLOCKS,
-                            ModIDs.RECIPEAPI
-                    )
-            );
-
-
-    public static final Mod RECIPES =
-            new Mod(
-                    ModIDs.RECIPES,
-                    "Primitive Recipes",
-                    dependencies(
-                            ModIDs.ARRI,
-                            ModIDs.MATTER,
-                            ModIDs.RECIPEAPI,
-                            ModIDs.UTILITYTOOLS,
-                            ModIDs.TOOLWORKS,
-                            ModIDs.TOOLS
+                            ModIDs.MULTIBLOCKS
                     )
             );
 }
